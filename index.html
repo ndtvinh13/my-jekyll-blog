@@ -3,3 +3,8 @@ layout: home
 author_profile: true
 ---
 
+{% if jekyll.environment == "production" %}
+  <p>Production mode</p>
+{% else %}
+  <p>Development mode</p>
+{% endif %}
