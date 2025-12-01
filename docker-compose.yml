@@ -14,6 +14,8 @@ services:
       - /srv/jekyll/.bundle
       - /srv/jekyll/.jekyll-cache
       # - /srv/jekyll/Gemfile.lock
+    environment:
+      - JEKYLL_ENV=production
     network_mode: bridge
     user: root:root
 
