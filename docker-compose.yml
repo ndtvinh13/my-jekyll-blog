@@ -1,0 +1,20 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-jekyll-blog
+    ports:
+      - "4444:4000"
+    volumes:
+      # Mount source files for live reloading during development
+      - .:/srv/jekyll
+      # Exclude vendor directory, bundle config to avoid conflicts
+      - /srv/jekyll/vendor
+      - /srv/jekyll/.bundle
+      - /srv/jekyll/.jekyll-cache
+      # - /srv/jekyll/Gemfile.lock
+    network_mode: bridge
+    user: root:root
+
+
