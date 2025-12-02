@@ -43,7 +43,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Your Name"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://blog.createa229.uk:4444" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -168,7 +168,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache # for caching includes
   - jekyll-paginate
-  
+
 
 # Include directories for processing
 include:
@@ -210,6 +210,12 @@ paginate_path: /page:num/
 # Add search engine
 search: true
 
+# Comments
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "createa229-blog"
+
 # Defaults
 defaults:
   # _posts
@@ -220,9 +226,10 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+      show_date: true
       
   # _pages
   - scope:
